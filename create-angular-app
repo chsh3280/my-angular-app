@@ -12,4 +12,14 @@ ng g c componentName - create new component
 ng g s serviceName - create new service
 service we put on module file in providers
 
-
+to form we need - FormsModule,ReactiveFormsModule in impots module file
+if ng g c not working:
+  go to https:/go.microsoft.com/fwlink/?LinkID=135170
+  on the terminal:
+  Get-ExecutionPolicy
+  Get-ExecutionPolicy -List
+  Get-ExecutionPolicy -Scope CurrentUser
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+  Get-ExecutionPolicy -Scope CurrentUser
+  and then - ng g c name
+  
