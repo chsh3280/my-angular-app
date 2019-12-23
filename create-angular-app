@@ -1,0 +1,15 @@
+Node - Https://nodejs.org/en install "for most user" varsion
+  to check if node installed - on the cmd write node -v
+Npm - 
+  to check if node installed - on the cmd write npm -v
+Angular Cli - npm install -g @angular/cli  
+  to check if node installed - on the cmd write ng -v
+Text editor - Visual Studio
+ng new myApp (we can see it on - https://cli.angular.io)
+cd myApp
+ng serve - to run project
+ng g c componentName - create new component
+ng g s serviceName - create new service
+service we put on module file in providers
+
+
