@@ -12,7 +12,13 @@ ng g c componentName - create new component
 ng g s serviceName - create new service
 service we put on module file in providers
 
+
+
 to form we need - FormsModule,ReactiveFormsModule in impots module file
+
+
+
+
 if ng g c not working:
   go to https:/go.microsoft.com/fwlink/?LinkID=135170
   on the terminal:
@@ -23,3 +29,57 @@ if ng g c not working:
   Get-ExecutionPolicy -Scope CurrentUser
   and then - ng g c name
   
+  
+  
+  
+ to import json file
+  1 add json file to assets
+  in the tsconfig.json put the value
+  
+  {
+  "compileOnSave": false,
+  "compilerOptions": {
+    
+   "baseUrl": "./",
+   "outDir": "./dist/out-tsc",
+   "sourceMap": true,
+   "declaration": false,
+   "module": "es2015",
+   "moduleResolution": "node",
+   "emitDecoratorMetadata": true,
+   "experimentalDecorators": true,
+   "importHelpers": true,
+   "target": "es5",
+   "typeRoots": [
+    "node_modules/@types"
+   ],
+   "lib": [
+    "es2018",
+    "dom"
+   ],
+   "paths": {
+    "virtual-receipt-lib": [
+     "dist/virtual-receipt-lib"
+    ],
+    "virtual-receipt-lib/*": [
+    "dist/virtual-receipt-lib/*"
+    ]
+   },
+   "resolveJsonModule": true,
+   "esModuleInterop": true
+  }
+ }
+
+  2.on the typings.t.ds in \node_modules\reflect-metadata
+    put value :
+    declare module "*.json"
+    { const value: any;
+      export default value;
+    }
+
+    declare module "json!*"
+    { const value: any;
+      export default value;
+    }
+    
+  and then - import * as graph from '../assets/optionsfile.json';
